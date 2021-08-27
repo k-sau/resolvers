@@ -27,4 +27,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add resolvers.txt
         git commit -m "Update resolvers" -a
-        git push "https://k-sau:${{ secrets.PERSONAL_TOKEN }}@github.com/janmasarik/resolvers.git" HEAD:master --follow-tags
+        git push "https://k-sau:${{ secrets.PERSONAL_TOKEN }}@github.com/k-sau/resolvers.git" HEAD:master --follow-tags
