@@ -2,7 +2,7 @@
 Fresh list of periodically validated public DNS resolvers.
  
 ```bash
-$ wget https://raw.githubusercontent.com/janmasarik/resolvers/master/resolvers.txt
+$ wget https://raw.githubusercontent.com/k-sau/resolvers/master/resolvers.txt
 $ massdns -r resolvers.txt domains_to_resolve.txt
 ```
 
