@@ -28,5 +28,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add resolvers.txt
-        git commit -m "Update resolvers" -a
+        git add nmap-resolvers.txt
+        git commit -am "Update resolvers"
         git push "https://k-sau:${{ secrets.PERSONAL_TOKEN }}@github.com/k-sau/resolvers.git" HEAD:master --follow-tags
