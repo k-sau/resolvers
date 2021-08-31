@@ -2,7 +2,8 @@ name: CI
 
 on:
   schedule:
-  - cron: "0 8,20 * * *"
+    - cron: "0 8,20 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,6 +22,7 @@ jobs:
         rm ../resolvers.txt
         dnsvalidator -tL ../input.txt -threads 5 -o ../resolvers.txt
         sed -i '/^$/d' ../resolvers.txt
+        cat ../resolvers.txt | tr '\n' ',' | tee ../nmap-resolvers.txt
     - name: Commit resolvers.txt
       run: |
         git config --local user.email "action@github.com"
