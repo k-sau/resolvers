@@ -21,6 +21,8 @@ jobs:
         sudo python3 setup.py install
         rm ../resolvers.txt
         dnsvalidator -tL ../input.txt -threads 5 -o ../resolvers.txt
+        ls
+        ls ../
         sed -i '/^$/d' ../resolvers.txt
         cat ../resolvers.txt | tr '\n' ',' | tee ../nmap-resolvers.txt
     - name: Commit resolvers.txt
